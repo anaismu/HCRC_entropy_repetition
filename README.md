@@ -8,17 +8,18 @@ The data available here is a processed subset of the corpus, and takes the shape
 
 It includes 26743 rows, where each row is a turn of the HCRC dataset, and 16 columns:
 
-ConvID: the ID of the conversation
-ConvIndex: chronologically indexes the turn in the conversation
-turn: the content of the turn.
-DA: the dialogue act (or "move") for the given turn
-BIGDA: supra-categories of dialogue acts, as justified in the paper.
-{X, OC, CC}_{self, other}_jaccard_index: the amount of self and other repetitions calculated after a jaccard-index-like computation; X, OC or CC stand for, respectively: all tokens, Open-Class tokens only, Closed-Class tokens only.
-entropy_speaker: shows the entropy calculation over the speaker dictionary only.
-entropy_conv: show the entropy calculation over the conversation dictionary.
-entropy_ratio: corresponds to the ratio entropy_speaker/entropy_conv.
-entropy_context: corresponds to the category of entropy dictated by the entropy ratio.
-repetition_binary: indicates the presence or absence (0) of every type of repetition. Useful for category-testing like chi-square tests.
+
+- ConvID: the ID of the conversation
+- ConvIndex: chronologically indexes the turn in the conversation
+- turn: the content of the turn.
+- DA: the dialogue act (or "move") for the given turn
+- BIGDA: supra-categories of dialogue acts, as justified in the paper.
+- {X, OC, CC}_{self, other}_jaccard_index: the amount of self and other repetitions calculated after a jaccard-index-like computation; X, OC or CC stand -for, respectively: all tokens, Open-Class tokens only, Closed-Class tokens only.
+- entropy_speaker: shows the entropy calculation over the speaker dictionary only.
+- entropy_conv: show the entropy calculation over the conversation dictionary.
+- entropy_ratio: corresponds to the ratio entropy_speaker/entropy_conv.
+- entropy_context: corresponds to the category of entropy dictated by the entropy ratio.
+- repetition_binary: indicates the presence or absence (0) of every type of repetition. Useful for category-testing like chi-square tests.
 
 
 
