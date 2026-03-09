@@ -14,12 +14,14 @@ It includes 26743 rows, where each row is a turn of the HCRC dataset, and 16 col
 - turn: the content of the turn.
 - DA: the dialogue act (or "move") for the given turn
 - BIGDA: supra-categories of dialogue acts, as justified in the paper.
-- {X, OC, CC}_{self, other}_jaccard_index: the amount of self and other repetitions calculated after a jaccard-index-like computation; X, OC or CC stand -for, respectively: all tokens, Open-Class tokens only, Closed-Class tokens only.
+- {X, OC, CC}_{self, other}_jaccard_index: considering _all (X)_ tokens, or only _Open-class (OC)_ or _Closed-Class (CC)_ tokens, the amount of _self_ or _other_ repetitions calculated after a jaccard-index-like computation.
 - entropy_speaker: shows the entropy calculation over the speaker dictionary only.
 - entropy_conv: show the entropy calculation over the conversation dictionary.
 - entropy_ratio: corresponds to the ratio entropy_speaker/entropy_conv.
 - entropy_context: corresponds to the category of entropy dictated by the entropy ratio.
 - repetition_binary: indicates the presence or absence (0) of every type of repetition. Useful for category-testing like chi-square tests.
+
+Note: as explained in the paper, entropy is calculated over tokens that have been uttered from the start of the conversation to the present turn (included). In summary, it estimates the distribution of tokens over a bag that includes all the tokens uttered by the current speaker (_entropy_speaker_) or all the participants (_entropy_conv_).
 
 
 
